@@ -1,0 +1,14 @@
+{
+    "ignore": ["node_modules", "pm2"],
+    "plugins": ["transform-object-rest-spread"],
+    "presets": [
+        [
+            "env", {
+                "targets": {
+                    "node": true
+                },
+                "useBuiltIns": true
+            }
+        ]
+    ]
+}

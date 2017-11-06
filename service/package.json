@@ -1,0 +1,64 @@
+{
+    "name": "data-wish-service",
+    "version": "0.0.1",
+    "description": "The data analysis service of XZHIKE",
+    "main": "index.js",
+    "author": "",
+    "license": "",
+    "homepage": "",
+    "dependencies": {
+        "babel-polyfill": "^6.23.0",
+        "babel-register": "^6.24.1",
+        "bcrypt": "^1.0.2",
+        "berry-error": "^0.6.1",
+        "berry-utils": "^1.0.1",
+        "bluebird": "^3.5.0",
+        "body-parser": "^1.17.2",
+        "cheerio": "^1.0.0-rc.2",
+        "debug": "^2.6.8",
+        "express": "^4.15.3",
+        "feathers": "^2.1.7",
+        "feathers-mongoose": "^5.1.2",
+        "feathers-rest": "^1.8.0",
+        "js-crawler": "^0.3.19",
+        "lodash": "^4.17.4",
+        "method-override": "^2.3.9",
+        "mongoose": "^4.11.5",
+        "mongoose-auto-increment": "^5.0.1",
+        "mongoose-deep-populate": "^3.0.0",
+        "mongoose-unique-validator": "^1.0.5"
+    },
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-cli": "^6.24.1",
+        "babel-eslint": "^7.2.3",
+        "babel-plugin-transform-object-rest-spread": "^6.23.0",
+        "babel-preset-env": "^1.6.0",
+        "eslint": "3.19.0",
+        "eslint-config-airbnb-base": "^11.3.1",
+        "eslint-plugin-html": "^2.0.3",
+        "eslint-plugin-import": "^2.7.0",
+        "husky": "^0.14.3",
+        "nodemon": "^1.11.0"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": false,
+            "node": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 8,
+            "sourceType": "module"
+        },
+        "globals": {}
+    },
+    "repository": {},
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint .",
+        "precommit": "npm run lint",
+        "production": "NODE_ENV=production pm2 start pm2/prod.json",
+        "staging": "NODE_ENV=staging pm2 start pm2/stag.json",
+        "testing": "NODE_ENV=testing pm2 start pm2/test.json",
+        "dev": "npm run lint && NODE_ENV=development DEBUG=http,mail,express:*,app:* ./node_modules/.bin/nodemon --inspect=6114 index.js"
+    }
+}

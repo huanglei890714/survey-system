@@ -1,0 +1,12 @@
+{
+    "name": "[xzhike][stag] data-analysis",
+    "script": "index.js",
+    "cwd": "./",
+    "error_file": "~/.pm2/logs/data-wish-service-stag-err.log",
+    "out_file": "~/.pm2/logs/data-wish-service-stag-out.log",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "max_memory_restart": "1G",
+    "env": {
+        "hostbypm2": "true"
+    }
+}
